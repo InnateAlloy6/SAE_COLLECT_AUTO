@@ -4,6 +4,7 @@
 ```
 Digitalisation_Commerces_Parisiens/
 ├── BCOM2023.ipynb                           # Code du projet sous Jupyter
+├── chromedriver                             # Pour faire une recherche dans Google Maps
 ├── data/                                    # Dossier contenant les fichiers de données CSV
 │   ├── BDCOM_2023(in).csv                   # Fichier de données initial
 │   ├── export_for_search.csv                # Fichier préparé pour le géocodage
