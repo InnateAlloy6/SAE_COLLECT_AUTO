@@ -3,13 +3,14 @@
 ## Structure du projet
 ```
 Digitalisation_Commerces_Parisiens/
-├── data/                    # Dossier contenant les fichiers de données CSV
-│   ├── BDCOM_2023(in).csv   # Fichier de données initial
-│   ├── export_for_search.csv # Fichier préparé pour le géocodage
-│   ├── result_geocoded.csv  # Résultats du géocodage
-│   ├── BCOM2023_enriched.csv # Fichier enrichi avec les coordonnées GPS
-│   └── BCOM2023_avec_site_et_livraison.csv # Fichier final enrichi
-├── README.md                # Documentation du projet
+├── BCOM2023.ipynb                           # Code du projet sous Jupyter
+├── data/                                    # Dossier contenant les fichiers de données CSV
+│   ├── BDCOM_2023(in).csv                   # Fichier de données initial
+│   ├── export_for_search.csv                # Fichier préparé pour le géocodage
+│   ├── result_geocoded.csv                  # Résultats du géocodage
+│   ├── BCOM2023_enriched.csv                # Fichier enrichi avec les coordonnées GPS
+│   └── BCOM2023_avec_site_et_livraison.csv  # Fichier final enrichi
+├── README.md                                # Documentation du projet
 ```
 
 ## Étape 1 : Chargement et exploration des données
