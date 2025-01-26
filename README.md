@@ -14,6 +14,7 @@ Digitalisation_Commerces_Parisiens/
 ```
 
 ## Étape 1 : Chargement et exploration des données
+### Temps d'execution: 2 Sec
 
 Dans cette étape, nous avons chargé le fichier CSV contenant les données des commerces parisiens dans un notebook Jupyter. L'objectif était d'explorer les colonnes disponibles afin d'identifier celles utiles pour la recherche des coordonnées géographiques, telles que l'adresse, le code postal et l'arrondissement. Nous avons également vérifié la qualité des données en identifiant les valeurs manquantes et les incohérences.
 
@@ -22,6 +23,7 @@ Fichier utilisé : `data/BDCOM_2023(in).csv`
 Une fois l'exploration terminée, une colonne 'adresse' a été construite en concaténant les informations de l'adresse (numéro, lettre, type de voie, libellé de voie et arrondissement) pour préparer les données au géocodage.
 
 ## Étape 2 : Géocodage des adresses
+### Temps d'execution: 1 Min 37 Sec
 
 Pour enrichir le dataset avec des coordonnées GPS, nous avons utilisé l'API de géocodage du gouvernement français. La liste des adresses a été exportée dans un fichier CSV, puis soumise à l'API via une requête HTTP POST. Les résultats obtenus (latitude et longitude) ont été enregistrés dans un nouveau fichier et intégrés dans le dataset initial.
 
@@ -30,6 +32,7 @@ Fichiers utilisés : `data/export_for_search.csv`, `data/result_geocoded.csv`
 En cas de succès, le fichier enrichi avec les coordonnées a été sauvegardé, permettant ainsi d'améliorer les analyses spatiales des commerces.
 
 ## Étape 3 : Recherche des sites web des commerces
+### Temps d'execution: 5 Sec
 
 L'étape suivante a consisté à rechercher les sites web des commerces à l'aide de l'outil Selenium et de la bibliothèque BeautifulSoup. L'idée était de scrapper les informations à partir de Google Maps en utilisant les adresses des commerces et leurs coordonnées géographiques.
 
@@ -42,6 +45,7 @@ Des pauses ont été introduites entre chaque requête pour éviter un blocage p
 Fichier produit : `data/BDCOM_2023_avec_site_et_livraison_test.csv`
 
 ## Étape 4 : Intégration des nouvelles données
+### Temps d'execution: +1H
 
 Après avoir enrichi les données avec les coordonnées GPS et les sites web des commerces, nous avons fusionné ces informations dans le dataset initial. La base de données finale contient désormais des colonnes supplémentaires pour les liens des sites web et l'indication de la disponibilité d'un service de livraison.
 
